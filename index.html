@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Encriptador de texto</title>
+  <link  rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+  <main class="contenido">
+    <div class="contenido__encriptador">
+      <textarea id="userInput" class="contenido__input" placeholder="Ingrese el texto aqui"></textarea>
+      <p class="contenido__restricciones">
+        <img src="./assets/bi_exclamation-circle-fill.png" alt="exclamation-sign"/> 
+        Solo letras minúsculas y sin acentos
+      </p>
+      <div class="contenido__botones">
+        <button onclick="transformarTexto(1);" class="boton oscuro">Encriptar</button>
+        <button onclick="transformarTexto(2);" class="boton">Desencriptar</button>
+      </div>
+    </div>
+    <div class="contenido__resultado">
+      <p id="textoResultado" class="contenido__resultado__completo"></p>
+      <div id="mensajeDeNoTexto" class="contenido__resultado__incompleto">
+        <img class="contenido__resultado__incompleto__imagen" src="./assets/Muñeco.png">
+        <h2>Ningún mensaje fue encontrado</h2>
+        <p class="contenido__resultado__mensaje">Ingresa el texto que deseas encriptar o desencriptar</p>
+      </div>
+      <button id="botonCopiar" onclick="copiarTexto();" class="boton">Copiar</button>
+    </div>
+  </main>
+  <footer>
+    Desarrollado por Antonio Renteria
+  </footer>
+  <script src="app.js"></script>
+</body>
+</html>
